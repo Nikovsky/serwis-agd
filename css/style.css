@@ -605,6 +605,7 @@ section.repair-steps div.step-by-step div.step div.step-desc p {
 
 section.question-repair {
   max-width: 1600px;
+  margin: 0 auto;
   padding: 10px 20px;
   color: var(--primary-color);
 }
@@ -937,6 +938,54 @@ footer p {
 
   section.activities div.repair:nth-of-type(odd) div.desc-repair p {
     padding-right: 20px;
+  }
+
+  section.offer-header div.offer-desc h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+
+  section.offer-header div.offer-desc h3 {
+    font-size: 2.25em;
+    letter-spacing: 1px;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 1.3em;
+  }
+
+  section.service-appliances div.service-card div.service {
+    flex: 1;
+    flex-basis: 35%;
+    margin: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+  }
+
+  section.service-appliances > p {
+    padding: 0 15px;
+  }
+
+  section.repair-steps > h1 {
+    font-size: 3.25em;
+  }
+
+  section.repair-steps > p {
+    font-size: 1.5em;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-img img {
+    max-width: 35%;
+    margin: 10px;
+  }
+
+  section.question-repair > h1 {
+    font-size: 3em;
+  }
+
+  section.question-repair > p {
+    font-size: 1.25em;
   }
 }
 
