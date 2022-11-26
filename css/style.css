@@ -1,0 +1,1102 @@
+:root {
+  --primary-color: #0189e4;
+  --second-color: #2092df;
+  --third-color: #ecebe4;
+  --menu-color: #2b2b2b;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Preloader */
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  margin: 0;
+  background-color: var(--primary-color);
+  transition: opacity 400ms ease-in-out, visibility 0s 400ms;
+}
+
+.show-preloader {
+  visibility: visible;
+  opacity: 1;
+}
+
+.circle {
+  background-color: var(--white-color);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: stretchdelay 0.7s infinite ease-in-out;
+}
+
+.preloader .circle:nth-child(1) {
+  animation-delay: -0.6s;
+}
+
+.preloader .circle:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+.preloader .circle:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+.preloader .circle:nth-child(4) {
+  animation-delay: -0.3s;
+}
+
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Nav */
+
+header {
+  padding: 0 20px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: relative;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header div.logo {
+  display: flex;
+  align-items: center;
+}
+
+header div.logo a {
+  font-size: 3em;
+  color: var(--white-color);
+}
+
+header div.logo a:hover {
+  color: var(--white-color);
+  transition: 0.3s;
+}
+
+header ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header ul li a {
+  color: var(--menu-color);
+  position: relative;
+}
+
+header ul li a:hover {
+  color: var(--white-color);
+  transition: 0.3s ease-in-out;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background-color: var(--white-color);
+  height: 0.15em;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+header div.hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+header div.hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: var(--white-color);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+header .open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+header .open .bar2 {
+  opacity: 0;
+}
+
+header .open .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+header .open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header .mobile-menu {
+  display: none;
+  position: absolute;
+  top: auto;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  z-index: 2;
+}
+
+header .mobile-menu li {
+  margin-top: 15px;
+}
+
+header nav ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+header ul.mobile-menu li a {
+  color: var(--white-color);
+  font-size: 2.5em;
+  text-transform: capitalize;
+}
+
+/* Index */
+/* Banner */
+section.banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: linear-gradient(rgba(32, 32, 32, 0.6), rgba(32, 32, 32, 0.6)),
+    url(../img/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+section.banner div.desc {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  text-align: center;
+}
+
+section.banner div.desc h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+section.banner div.desc p {
+  font-size: 1.45em;
+  font-weight: normal;
+  color: var(--white-color);
+  letter-spacing: 0.8px;
+  margin-top: 10px;
+}
+
+section.banner div.desc a {
+  display: inline-block;
+  height: 2em;
+  padding: 0 10px;
+  margin-top: 4%;
+  background-color: #d66853;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  box-shadow: none;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 2em;
+  color: var(--white-color);
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Section Features */
+
+section.features {
+  max-width: 1600px;
+  margin: 30px auto 0;
+  padding: 5%;
+  text-align: center;
+}
+
+section.features h1 {
+  font-size: 2.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+}
+
+section.features h2 {
+  font-size: 2.25em;
+  text-transform: uppercase;
+}
+
+section.features p.description {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.55em;
+  line-height: 1.3;
+  margin: 15px 0;
+}
+
+section.features img {
+  max-width: 275px;
+  width: 55%;
+  margin: 8px 0;
+}
+
+/* Section Activities */
+
+section.activities {
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+section.activities div.repair {
+  max-width: 1600px;
+  margin: 0 auto 20px auto;
+}
+
+section.activities h1 {
+  text-transform: uppercase;
+  letter-spacing: 1.15px;
+  font-size: 2.15em;
+  color: var(--white-color);
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid --white-color;
+}
+
+section.activities div.repair div.repair-img img {
+  width: 65%;
+}
+
+section.activities div.repair div.desc-repair {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--white-color);
+  padding: 10px 20px 20px 0;
+  text-align: left;
+}
+
+section.activities div.repair div.desc-repair h2 {
+  font-size: 2.1em;
+  border-bottom: 2px solid var(--white-color);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  text-indent: 25px;
+  text-transform: uppercase;
+}
+
+section.activities div.repair div.desc-repair p {
+  font-size: 1.25em;
+  padding-left: 25px;
+  line-height: 120%;
+}
+
+section.activities div.repair {
+  border-bottom: 3px solid var(--white-color);
+  padding-top: 5px;
+}
+
+section.activities div.repair:nth-of-type(even) {
+  background-color: var(--second-color);
+}
+
+section.activities a {
+  display: inline-block;
+  height: 2em;
+  padding: 0 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  background-color: #d66853;
+  font-size: 1.75em;
+  text-transform: uppercase;
+  box-shadow: none;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 2em;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Section Companies */
+
+section.companies {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+section.companies h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section.companies div.slide-track {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 1.5em;
+  overflow: hidden;
+}
+
+section.companies div.slide-track div.slide img {
+  width: 100px;
+  margin-left: 3em;
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}
+
+/* Oferta */
+/* Banner */
+
+section.offer-header {
+  background-color: var(--second-color);
+  overflow: hidden;
+}
+
+section.offer-header div.offer-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 60%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section.offer-header div.offer-img img {
+  max-width: 75%;
+  margin: 5px 0 -5px 10px;
+}
+
+section.offer-header div.offer-desc {
+  color: var(--white-color);
+}
+
+section.offer-header div.offer-desc h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+section.offer-header div.offer-desc h3 {
+  font-size: 1.25em;
+  letter-spacing: 0.7px;
+}
+
+section.offer-header div.offer-desc p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.6px;
+  padding-right: 6px;
+}
+
+/* Service Appliances */
+
+section.service-appliances {
+  background-color: var(--third-color);
+  padding-bottom: 20px;
+}
+
+section.service-appliances > h1,
+section.service-appliances > p {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: var(--second-color);
+  text-align: center;
+}
+
+section.service-appliances > h1 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+section.service-appliances > p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.35em;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding: 0 7px;
+}
+
+section.service-appliances div.service-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: var(--second-color);
+}
+
+section.service-appliances div.service-card div.service {
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  flex-basis: 50%;
+  margin: 15px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+}
+
+section.service-appliances div.service-card div.service div.service-img img {
+  max-width: 100%;
+}
+
+section.service-appliances div.service-card div.service div.service-desc {
+  padding: 0 20px 20px;
+}
+
+section.service-appliances div.service-card div.service div.service-desc h3 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+section.service-appliances div.service-card div.service div.service-desc p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--second-color);
+  margin-top: 10px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+/* Steps Repiar */
+
+section.repair-steps {
+  background-color: var(--second-color);
+  padding: 10px 0;
+}
+
+section.repair-steps > h1,
+section.repair-steps > p {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: var(--white-color);
+  text-align: center;
+}
+
+section.repair-steps > h1 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+section.repair-steps > p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.35em;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+section.repair-steps div.step-by-step {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+section.repair-steps div.step-by-step div.step {
+  flex: 1 1 auto;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+section.repair-steps div.step-by-step div.step div.step-img img {
+  max-width: 50%;
+  border: 3px solid var(--white-color);
+  border-radius: 50%;
+}
+
+section.repair-steps div.step-by-step div.step div.step-desc {
+  padding: 0 20px;
+}
+
+section.repair-steps div.step-by-step div.step div.step-desc h3 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+section.repair-steps div.step-by-step div.step div.step-desc p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--white-color);
+  margin-top: 5px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+/* Question Repair */
+
+section.question-repair {
+  max-width: 1600px;
+  padding: 10px 20px;
+  color: var(--primary-color);
+}
+
+section.question-repair > h1 {
+  font-size: 2.25em;
+}
+
+section.question-repair > p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.145em;
+  line-height: 125%;
+  padding-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--second-color);
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: var(--white-color);
+  font-size: 2em;
+}
+
+/* Media Query */
+
+@media (orientation: portrait) and (min-width: 360px) {
+  section.banner div.desc {
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: whitesmoke;
+  }
+
+  section.banner div.desc p {
+    font-size: 1.55em;
+    font-weight: normal;
+    color: white;
+    letter-spacing: 0.8px;
+    margin-top: 8px;
+  }
+
+  section.banner div.desc a {
+    display: inline-block;
+    height: 2em;
+    padding: 0 10px;
+    margin-top: 4%;
+    background-color: #d66853;
+    font-size: 1.35em;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 2em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 1.2em;
+  }
+
+  section.question-repair > h1 {
+    font-size: 2.75em;
+  }
+
+  section.question-repair > p {
+    font-size: 1.5em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 410px) {
+  section.banner div.desc p {
+    font-size: 1.85em;
+  }
+  section.banner div.desc a {
+    display: inline-block;
+    height: 2em;
+    padding: 0 10px;
+    margin-top: 4%;
+    background-color: #d66853;
+    font-size: 1.65em;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 2em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  footer p {
+    font-size: 1.55em;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  /* Banner */
+  section.banner div.desc {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15%;
+    right: 15%;
+    text-align: center;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 4.5em;
+  }
+
+  section.banner div.desc p {
+    font-size: 2.15em;
+  }
+
+  section.banner div.desc a {
+    font-size: 2.15em;
+  }
+
+  section.features h1 {
+    font-size: 3.75em;
+  }
+
+  section.activities a {
+    padding: 0 25px;
+    font-size: 2.75em;
+    border-radius: 6px;
+  }
+
+  section.features div.feature h2 {
+    font-size: 2.75em;
+  }
+
+  section.features div.feature p.description {
+    font-size: 2.55em;
+  }
+
+  section.activities h1 {
+    font-size: 4.5em;
+  }
+
+  section.activities div.repair div.desc-repair h2 {
+    font-size: 4em;
+  }
+
+  section.activities div.repair div.desc-repair p {
+    font-size: 2.225em;
+  }
+
+  footer p {
+    font-size: 2.15em;
+  }
+}
+
+@media (orientation: landscape) {
+  section.banner div.desc {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 1.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: whitesmoke;
+  }
+
+  section.banner div.desc p {
+    font-size: 1.15em;
+    font-weight: normal;
+    color: white;
+    letter-spacing: 0.8px;
+    margin-top: 8px;
+  }
+
+  section.banner div.desc a {
+    display: inline-block;
+    height: 2em;
+    padding: 0 10px;
+    margin-top: 3%;
+    background-color: #d66853;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 2em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  section.features p.description {
+    font-size: 1.75em;
+    margin: 12px 0;
+  }
+
+  section.activities div.repair div.repair-img,
+  div.desc-repair {
+    width: 50%;
+    float: left;
+  }
+
+  section.activities div.repair div.repair-img {
+    display: block;
+  }
+
+  section.activities div.repair:nth-of-type(even) div.repair-img {
+    float: right;
+  }
+
+  section.activities div.repair:nth-of-type(odd) div.desc-repair {
+    padding-right: 0;
+  }
+
+  section.activities div.repair:nth-of-type(odd) div.desc-repair h2 {
+    padding-right: 0;
+    text-indent: 0;
+    margin-left: 20px;
+  }
+
+  section.activities div.repair:nth-of-type(odd) div.desc-repair p {
+    padding-right: 20px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  section.banner div.desc {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    right: 15%;
+    text-align: center;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 2.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: whitesmoke;
+  }
+
+  section.banner div.desc p {
+    font-size: 1.65em;
+    font-weight: normal;
+    color: white;
+    letter-spacing: 0.8px;
+    margin-top: 8px;
+  }
+
+  section.banner div.desc a {
+    display: inline-block;
+    height: 2em;
+    padding: 0 10px;
+    margin-top: 4%;
+    background-color: #d66853;
+    font-size: 1.35em;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 2em;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  section.features {
+    margin-top: 15px;
+  }
+
+  section.features img {
+    max-width: 275px;
+    width: 35%;
+    margin: 8px 0;
+  }
+
+  section.activities div.repair div.repair-img img {
+    width: 85%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 730px) {
+  section.banner div.desc {
+    top: 17%;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 2.65em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  /* NAV */
+  header nav ul li a {
+    font-size: 2.25em;
+    padding: 0 1em;
+    text-transform: capitalize;
+  }
+
+  /* Banner */
+  section.banner div.desc {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15%;
+    right: 15%;
+    text-align: center;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 3.5em;
+  }
+
+  section.banner div.desc p {
+    font-size: 2.15em;
+  }
+
+  section.banner div.desc a {
+    font-size: 2.15em;
+    cursor: pointer;
+  }
+
+  section.banner div.desc a:hover {
+    box-shadow: inset 0 0 0 5em rgba(255, 255, 255, 0.15);
+  }
+
+  section.activities h1 {
+    font-size: 4.2em;
+  }
+
+  section.activities a {
+    font-size: 2.25em;
+    border-radius: 9px;
+    padding: 0 25px;
+  }
+
+  section.activities div.repair div.repair-img img {
+    width: 75%;
+  }
+
+  section.activities div.repair div.desc-repair h2 {
+    font-size: 3.2em;
+  }
+
+  section.activities div.repair div.desc-repair p {
+    font-size: 1.55em;
+  }
+
+  section.companies div.slide-track div.slide img {
+    margin-left: 10em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1280px) {
+  section.banner div.desc {
+    left: 25%;
+    right: 25%;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 4.75em;
+  }
+
+  section.banner div.desc p {
+    font-size: 2.65em;
+    letter-spacing: 0.9px;
+    margin-top: 3%;
+    text-align: center;
+  }
+
+  section.banner div.desc a {
+    margin-top: 3%;
+    font-size: 2.35em;
+  }
+
+  section.activities {
+    overflow: hidden;
+  }
+
+  section.activities a {
+    font-size: 2.75em;
+    border-radius: 12px;
+    padding: 0 30px;
+    letter-spacing: 0.5px;
+  }
+
+  section.activities div.repair div.repair-img img {
+    width: 75%;
+    margin-bottom: -3px;
+  }
+
+  section.activities div.repair div.desc-repair h2 {
+    font-size: 3.35em;
+  }
+
+  section.activities div.repair div.desc-repair p {
+    font-size: 1.95em;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+  section.banner div.desc {
+    left: 20%;
+    right: 20%;
+  }
+
+  section.banner div.desc h1 {
+    font-size: 5.25em;
+  }
+
+  section.banner div.desc p {
+    font-size: 3em;
+  }
+
+  section.banner div.desc a {
+    font-size: 3.15em;
+  }
+
+  section.activities div.repair div.desc-repair h2 {
+    font-size: 3.75em;
+  }
+
+  section.activities div.repair div.desc-repair p {
+    font-size: 2.35em;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.features {
+    padding: 3% 2%;
+  }
+
+  section.features div.feature {
+    float: left;
+    width: 33%;
+  }
+
+  section.features h1 {
+    font-size: 3.75em;
+  }
+
+  section.features h2 {
+    font-size: 3.15em;
+  }
+
+  section.features p.description {
+    font-size: 2.57em;
+    line-height: 120%;
+    margin: 20px 0;
+  }
+
+  section.features img {
+    margin-top: 15px;
+  }
+
+  section.activies {
+    overflow: hidden;
+  }
+
+  section.activities div.repair div.repair-img img {
+    width: 75%;
+    margin-bottom: -3px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header nav {
+    display: none;
+  }
+
+  header div.hamburger-icon {
+    display: block;
+  }
+}
