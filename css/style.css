@@ -1044,6 +1044,22 @@ footer p {
   section.activities div.repair div.repair-img img {
     width: 85%;
   }
+
+  section.offer-header div.offer-desc h1 {
+    font-size: 3.45em;
+  }
+
+  section.offer-header div.offer-desc h3 {
+    font-size: 2.45em;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 1.45em;
+  }
+
+  section.question-repair > p {
+    font-size: 1.45em;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 730px) {
@@ -1053,6 +1069,18 @@ footer p {
 
   section.banner div.desc h1 {
     font-size: 2.65em;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 1.7em;
+  }
+
+  section.service-appliances > h1 {
+    font-size: 3.5em;
+  }
+
+  section.service-appliances > p {
+    font-size: 1.7em;
   }
 }
 
@@ -1116,6 +1144,44 @@ footer p {
   section.companies div.slide-track div.slide img {
     margin-left: 10em;
   }
+
+  section.service-appliances > p {
+    font-size: 2em;
+  }
+
+  section.service-appliances div.service-card div.service div.service-desc h3 {
+    font-size: 3em;
+  }
+
+  section.service-appliances div.service-card div.service div.service-desc p {
+    font-size: 2em;
+  }
+
+  section.repair-steps > h1 {
+    font-size: 5em;
+  }
+
+  section.repair-steps > p {
+    font-size: 2em;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc h3 {
+    font-size: 2.75em;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc p {
+    font-size: 1.75em;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  section.question-repair > h1 {
+    font-size: 4em;
+  }
+
+  section.question-repair > p {
+    font-size: 1.75em;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 1280px) {
@@ -1163,6 +1229,51 @@ footer p {
   section.activities div.repair div.desc-repair p {
     font-size: 1.95em;
   }
+
+  section.offer-header div.offer-desc h1 {
+    font-size: 6em;
+  }
+
+  section.offer-header div.offer-desc h3 {
+    font-size: 3em;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 2.25em;
+    padding-right: 15%;
+  }
+
+  section.service-appliances > h1 {
+    font-size: 4.4em;
+  }
+
+  section.service-appliances > p {
+    font-size: 2.25em;
+    padding: 0 5%;
+  }
+
+  section.service-appliances div.service-card div.service {
+    flex: 1;
+    flex-basis: 25%;
+  }
+
+  section.repair-steps div.step-by-step div.step {
+    flex: 1;
+    flex-shrink: 1;
+    flex-basis: 30%;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-img img {
+    max-width: 55%;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc {
+    padding: 0;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc p {
+    margin: 0 0 0 0;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 1600px) {
@@ -1189,6 +1300,26 @@ footer p {
 
   section.activities div.repair div.desc-repair p {
     font-size: 2.35em;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 2.45em;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc p {
+    font-size: 2em;
+  }
+
+  section.question-repair > h1 {
+    font-size: 4.25em;
+  }
+
+  section.question-repair > p {
+    font-size: 2.1em;
+  }
+
+  footer p {
+    font-size: 2.45em;
   }
 }
 
