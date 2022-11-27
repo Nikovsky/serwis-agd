@@ -304,11 +304,6 @@ section.activities {
   text-align: center;
 }
 
-section.activities div.repair {
-  max-width: 1600px;
-  margin: 0 auto 20px auto;
-}
-
 section.activities h1 {
   text-transform: uppercase;
   letter-spacing: 1.15px;
@@ -324,6 +319,8 @@ section.activities div.repair div.repair-img img {
 }
 
 section.activities div.repair div.desc-repair {
+  max-width: 1280px;
+  margin: 0 auto 20px auto;
   font-family: "Roboto Condensed", sans-serif;
   color: var(--white-color);
   padding: 10px 20px 20px 0;
@@ -376,7 +373,7 @@ section.activities a {
 /* Section Companies */
 
 section.companies {
-  background-color: var(--white-color);
+  background-color: var(--third-color);
   display: flex;
   flex-direction: column;
   height: auto;
@@ -385,7 +382,8 @@ section.companies {
 }
 
 section.companies h1 {
-  font-size: 2em;
+  font-size: 1.9em;
+  color: var(--second-color);
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
@@ -621,18 +619,6 @@ section.question-repair > p {
   padding-top: 10px;
 }
 
-/* Footer */
-footer {
-  background-color: var(--second-color);
-  text-align: center;
-  padding: 10px 0;
-}
-
-footer p {
-  color: var(--white-color);
-  font-size: 2em;
-}
-
 /* Review */
 
 section.review {
@@ -669,6 +655,8 @@ section.review div.review-card p.review-quote {
 }
 
 section.review div.review-card div.reviewer-photo img {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   margin: 20px auto 10px;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.1));
@@ -681,8 +669,58 @@ section.review div.review-card div.reviewer-info p.name {
 }
 
 section.review div.review-card div.reviewer-info p.city {
-  font-size: 1.25em;
+  font-size: 1.35em;
   font-weight: 500;
+}
+
+/* O firmie */
+/* About us */
+
+section.about-us {
+  width: 100%;
+  height: 8vh;
+  background-color: var(--second-color);
+  text-align: center;
+}
+
+section.about-us > h1 {
+  color: var(--white-color);
+  font-size: 2em;
+  line-height: 8vh;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+/* Service Info */
+
+section.service-info {
+  max-width: 1600px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+section.service-info > h1 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+
+section.service-info > p {
+  color: var(--second-color);
+  font-size: 1.135em;
+  line-height: 1.55em;
+}
+
+/* Footer */
+footer {
+  background-color: var(--second-color);
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  color: var(--white-color);
+  font-size: 2em;
 }
 
 /* Media Query */
@@ -912,6 +950,32 @@ section.review div.review-card div.reviewer-info p.city {
     padding-top: 10px;
   }
 
+  section.review {
+    gap: 15px;
+    padding: 20px 20px;
+  }
+
+  section.review div.review-card {
+    flex: 1;
+    flex-basis: 20%;
+  }
+
+  section.review div.review-card div.rating {
+    font-size: 2.25em;
+  }
+
+  section.review div.review-card p.review-quote {
+    font-size: 1.7em;
+  }
+
+  section.review div.review-card div.reviewer-info p.name {
+    font-size: 1.815em;
+  }
+
+  section.review div.review-card div.reviewer-info p.city {
+    font-size: 1.66em;
+  }
+
   footer p {
     font-size: 2.5em;
   }
@@ -976,6 +1040,10 @@ section.review div.review-card div.reviewer-info p.city {
 
   section.activities div.repair:nth-of-type(even) div.repair-img {
     float: right;
+  }
+
+  section.activities div.repair:nth-of-type(even) div.desc-repair {
+    text-align: right;
   }
 
   section.activities div.repair:nth-of-type(odd) div.desc-repair {
@@ -1134,6 +1202,44 @@ section.review div.review-card div.reviewer-info p.city {
   section.service-appliances > p {
     font-size: 1.7em;
   }
+
+  section.repair-steps div.step-by-step div.step div.step-img img {
+    max-width: 25%;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc {
+    padding: 0 7%;
+  }
+
+  section.repair-steps div.step-by-step div.step div.step-desc p {
+    font-size: 1.55em;
+  }
+
+  section.review {
+    gap: 15px;
+    padding: 20px 15px;
+  }
+
+  section.review div.review-card {
+    flex: 1;
+    flex-basis: 20%;
+  }
+
+  section.review div.review-card div.rating {
+    font-size: 2em;
+  }
+
+  section.review div.review-card p.review-quote {
+    font-size: 1.5em;
+  }
+
+  section.review div.review-card div.reviewer-info p.name {
+    font-size: 1.7em;
+  }
+
+  section.review div.review-card div.reviewer-info p.city {
+    font-size: 1.6em;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -1233,6 +1339,10 @@ section.review div.review-card div.reviewer-info p.city {
 
   section.question-repair > p {
     font-size: 1.75em;
+  }
+
+  section.review div.review-card p.review-quote {
+    font-size: 1.65em;
   }
 }
 
@@ -1354,6 +1464,10 @@ section.review div.review-card div.reviewer-info p.city {
     font-size: 2.35em;
   }
 
+  section.companies h1 {
+    font-size: 2.25em;
+  }
+
   section.offer-header div.offer-desc p {
     font-size: 2.45ems;
   }
@@ -1368,6 +1482,24 @@ section.review div.review-card div.reviewer-info p.city {
 
   section.question-repair > p {
     font-size: 2.1em;
+  }
+
+  section.offer-header div.offer-desc h1 {
+    font-size: 6.75em;
+  }
+
+  section.offer-header div.offer-desc h3 {
+    font-size: 4.95em;
+  }
+
+  section.offer-header div.offer-desc p {
+    font-size: 3em;
+    padding-bottom: 10px;
+  }
+
+  section.service-appliances div.service-card div.service {
+    flex: 1;
+    flex-basis: 20%;
   }
 
   footer p {
