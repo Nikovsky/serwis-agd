@@ -888,6 +888,42 @@ footer p {
   font-size: 2em;
 }
 
+/* TOP */
+
+a#top-a {
+  display: inline-block;
+  background-color: var(--second-color);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  text-decoration: none;
+  color: white;
+  border: 2px solid var(--white-color);
+  z-index: 1000;
+}
+
+a#top-a::after {
+  content: "⯅";
+  font-size: 2em;
+  line-height: 25px;
+}
+
+a#top-a:hover {
+  cursor: pointer;
+}
+
+a#top-a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Media Query */
 
 @media (orientation: portrait) and (min-width: 360px) {
@@ -941,6 +977,18 @@ footer p {
   }
 
   section.question-repair > p {
+    font-size: 1.5em;
+  }
+
+  section.service-city div.select-btn {
+    font-size: 1.5em;
+  }
+
+  section.service-city.active div.content-service div.search-service input {
+    font-size: 1.5em;
+  }
+
+  section.service-city.active div.content-service ul.options li {
     font-size: 1.5em;
   }
 }
@@ -1161,6 +1209,57 @@ footer p {
 
   footer p {
     font-size: 2.5em;
+  }
+
+  section.service-city {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    min-width: 50vh;
+    height: auto;
+    overflow-y: hidden;
+    background-image: url("../img/mapa.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+  }
+
+  section.service-city div.select-btn {
+    width: 320px;
+    height: 50px;
+    font-size: 2em;
+    background-color: #fff;
+  }
+
+  section.service-city.active
+    div.content-service
+    div.search-service
+    > span.material-symbols-outlined {
+    font-size: 2.5em;
+  }
+
+  section.service-city.active div.content-service div.search-service input {
+    font-size: 1.55em;
+  }
+
+  section.service-city.active div.content-service ul.options li {
+    font-size: 1.7em;
+  }
+
+  section.service-city.active div.content-service ul.options li:hover,
+  li:selected {
+    border-radius: 5px;
+    background: #f2f2f2;
+  }
+
+  section.service-city div.service-city-info {
+    padding: 15px 30px;
+    font-size: 2em;
+    font-family: "Roboto Condensed", sans-serif;
   }
 }
 
@@ -1551,6 +1650,83 @@ footer p {
 
   section.review div.review-card p.review-quote {
     font-size: 1.65em;
+  }
+  section.service-city {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    min-width: 50vh;
+    max-width: 100vh;
+    height: auto;
+    overflow-y: hidden;
+    background-image: url("../img/mapa.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+  }
+
+  section.service-city div.select-btn {
+    width: 320px;
+    height: 50px;
+    font-size: 2em;
+    background-color: #fff;
+  }
+
+  section.service-city.active
+    div.content-service
+    div.search-service
+    > span.material-symbols-outlined {
+    font-size: 2.5em;
+  }
+
+  section.service-city.active div.content-service div.search-service input {
+    font-size: 1.55em;
+  }
+
+  section.service-city.active div.content-service ul.options li {
+    font-size: 1.7em;
+  }
+
+  section.service-city.active div.content-service ul.options li:hover,
+  li:selected {
+    border-radius: 5px;
+    background: #f2f2f2;
+  }
+
+  section.service-city div.service-city-info {
+    height: auto;
+    min-height: 10vh;
+    padding: 15px 30px;
+    font-size: 2.5em;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  section.service-city div.service-city-info p#godzinyOtwarcia::before {
+    content: "Godziny otwarcia: ";
+    font-size: 1.1em;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+
+  section.service-city div.service-city-info p#adresSerwisu::before {
+    content: "Adres serwisu: ";
+    font-size: 1.1em;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+
+  section.service-city div.service-city-info p#city::before {
+    content: "Miejscowość: ";
+    font-size: 1.1em;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+
+  section.service-city div.service-city-info p#tel::before {
+    content: "Nr.tel: ";
+    font-size: 1.1em;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
   }
 }
 
