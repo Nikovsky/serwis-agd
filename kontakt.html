@@ -8,6 +8,8 @@
     <title>Serwis AGD</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -47,106 +49,107 @@
         </div>
     </header>
     <script src="js/burger-menu.js"></script>
-    <section class="banner">
-        <div class="desc">
-            <h1>Naprawa i autoryzowany serwis sprzętu AGD</h1>
-            <p>Współpracujący z Nami fachowcy zajmują się naprawą pralek, lodówek, mikrofalówek, zamrażarek, kuchenek.
-                Zadzwoń już teraz xxx-xxx-xxx lub Zamów usługę ONLINE. Naprawa zostanie wykonana przez serwisanta
-                bezpośrednio
-                u Ciebie w domu!
-            </p>
-            <a href="oferta.html">Sprawdź ofertę!</a>
+    <section class="contact">
+        <div class="title">
+            <img src="img/logo_mini.png" alt="Logo formularz">
+            <h1>Zgłoszenie naprawy</h1>
         </div>
+        <form action="#" method="POST" class="form-service">
+            <div class="contact-case">
+                <div class="form-first">
+                    <label for="name">Imię:</label>
+                    <input type="text" id="name" name="name" size="25" placeholder="Imię" title="Wprowadź imię"
+                        pattern="[A-Z-zóąśłżźćńÓĄŚŁŻŹĆŃ][a-z-zóąśłżźćńÓĄŚŁŻŹĆŃ]{2,20}" required autofocus
+                        autocomplete="off">
+                    <label for="surname">Nazwisko:</label>
+                    <input type="text" id="surname" name="surname" size="25" placeholder="Nazwisko"
+                        title="Wprowadź nazwisko" pattern="[A-Z-zóąśłżźćńÓĄŚŁŻŹĆŃ][a-z-zóąśłżźćńÓĄŚŁŻŹĆŃ]{1,25}"
+                        required>
+                    <label for="number">Nr.tel:</label>
+                    <input type="tel" id="number" name="number" size="25" placeholder="Nr.tel" title="Wprowadź nr.tel"
+                        pattern="[0-9]{9}" maxlength="9" required>
+                    <label for=" email">E-mail:</label>
+                    <input type="email" id="email" name="email" size="25" placeholder="E-mail" title="Wprowadź e-mail"
+                        required>
+                    <label for="address">Adres:</label>
+                    <input type="text" id="address" name="address" size="25" placeholder="Adres zamieszkania"
+                        title="Wprowadź adres" pattern="[A-Z-zóąśłżźćńÓĄŚŁŻŹĆŃ][a-z-zóąśłżźćńÓĄŚŁŻŹĆŃ]{1,30}"
+                        maxlength="30" required>
+                    <label for="city">Miejscowość:</label>
+                    <input type="text" id="city" name="city" size="25" placeholder="Miejscowość"
+                        title="Wprowadź miejscowość" pattern="[A-Z-zóąśłżźćńÓĄŚŁŻŹĆŃ][a-z-zóąśłżźćńÓĄŚŁŻŹĆŃ]{1,30}"
+                        maxlength="30" required>
+                    <label for="postcode">Kod pocztowy:</label>
+                    <input type="text" id="postcode" name="postcode" size="25" placeholder="Kod pocztowy"
+                        title="Wprowadź kod pocztowy" maxlength="6" onBlur='addDashes(this)' required>
+                </div>
+                <div class="form-second">
+                    <label for="appliances">Typ urządzenia:</label>
+                    <select name="appliances" id="appliances" required>
+                        <option value="pralka">Pralka</option>
+                        <option value="kuchenka">Kuchenka</option>
+                        <option value="zmywarka">Zmywarka</option>
+                        <option value="lodowka">Lodówka</option>
+                        <option value="piekarnik">Piekarnik</option>
+                        <option value="klimatyzacja">Klimatyzacja</option>
+                        <option value="other">Inne</option>
+                    </select>
+                    <label for="model">Nazwa i model urządzenia:</label>
+                    <input type="text" id="model" name="model" size="25" placeholder="Nazwa i model"
+                        title="Wprowadź nazwę i model urządenia" required>
+                    <label for="service">Rodzaj naprawy:</label>
+                    <label for="service"><input type="radio" name="service" id="service" value="pogwarancyjna">
+                        Pogwarancyjna</label>
+                    <label for="service"><input type="radio" name="service" id="service" value="gwarancyjna">
+                        Gwarancyjna</label>
+                    <label for="desc-fauklt">Opis usterki:</label>
+                    <textarea id="desc-fauklt" name="desc-fauklt" rows="4" cols="30" placeholder="Opisz swój problem"
+                        title="Opisz usterkę" required></textarea>
+                    <label for="photo-fauklt">Prześlij zdjęcie usterki:</label>
+                    <input type="file" id="photo-fauklt" name="photo-fauklt">
+                </div>
+            </div>
+            <input type="submit" class="submit-btn" value="Wyślij zgłoszenie">
+        </form>
+        <script src="js/validate-form.js"></script>
     </section>
-    <section class="features clearfix">
-        <h1>Dlaczego warto wybrać nasz serwis?</h1>
-        <div class="feature">
-            <img src="img/reapir.png" alt="Klucz naprawczy">
-            <h2>Szeroki zakres usług</h2>
-            <p class="description">Naprawiamy sprzęt AGD i świadczymy usługi pogotowia technicznego.</p>
-        </div>
-        <div class="feature">
-            <img src="img/team.png" alt="Zespół">
-            <h2>Doświadczony zespół</h2>
-            <p class="description">W naszym zespole pracują fachowcy z wieloletnim doświadczeniem.</p>
-        </div>
-        <div class="feature">
-            <img src="img/location.png" alt="Zespół">
-            <h2>Działamy w całej Polsce</h2>
-            <p class="description">Świadczymy usługi w ponad 60 miastach na terenie całej Polski.</p>
-        </div>
-    </section>
-    <section class="activities">
-        <h1>Zakres naszej działalności</h1>
-        <div class="repair clearfix">
-            <div class="repair-img"><img src="img/naprawa-pralek.png" alt="Serwisant i pralka"></div>
-            <div class="desc-repair">
-                <h2>Naprawa pralek</h2>
-                <p>Naprawa i serwis pogwarancyjny pralek i suszarek znanych producentów sprzętu AGD.
-                    Skorzystaj z doświadczenia naszych serwisantów i profesjonalnej naprawy pralek, którą realizujemy od
-                    wielu
-                    lat. W celu zamówienia serwisanta wystarczy zadzwonić na naszą infolinie i zgłosić awarię. Następnie
-                    podczas
-                    rozmowy konsultant zapyta się o markę pralki i objawy awarii. Dzięki temu serwisant będzie dobrze
-                    przygotowany
-                    do naprawy. Między innymi przyjedzie z częściami zamiennymi do twojego modelu pralki. W końcu
-                    podczas rozmowy
-                    ustalisz z naszym pracownikiem dogodny czas przyjazdu serwisanta. Skutkiem tych ustaleń nasz technik
-                    bezzwłocznie zjawi się w twoim domu o wyznaczonej porze.</p>
+    <section class="repair-steps">
+        <h1>Jak szybko zlecić naprawę?</h1>
+        <p>Z nami szybko i sprawnie zlecisz naprawę swojego sprzętu AGD. Wystarczą 3 kroki.</p>
+        <div class="step-by-step">
+            <div class="step">
+                <div class="step-img">
+                    <img src="img/step-1.jpg" alt="Krok 1">
+                </div>
+                <div class="step-desc">
+                    <h3>Zadzwoń</h3>
+                    <p>Teraz zadzwoń pod numer 456-342-897 lub napisz wiadomość na adres email i porozmawiaj z naszym
+                        konsultantem, który umówi serwisanta.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-img">
+                    <img src="img/step-2.jpg" alt="Krok 2">
+                </div>
+                <div class="step-desc">
+                    <h3>Wizyta serwisanta</h3>
+                    <p>Następnie serwisant przyjedzie pod wskazany adres i dokona oceny sytuacji, oszacuje wartość
+                        części do
+                        naprawy oraz wyceny serwisu sprzętu AGD.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-img">
+                    <img src="img/step-3.jpg" alt="Krok 3">
+                </div>
+                <div class="step-desc">
+                    <h3>Naprawa AGD</h3>
+                    <p>Natychmiast naprawimy sprzęt AGD, wymienimy zużyte podzespoły, dając Tobie aż dwa lata gwarancji
+                        na
+                        części użyte przy naprawie usterki.</p>
+                </div>
             </div>
         </div>
-        <div class="repair clearfix">
-            <div class="repair-img"><img src="img/naprawa-kuchenek.png" alt="Serwisant i kuchenka"></div>
-            <div class="desc-repair">
-                <h2>Naprawa kuchenek</h2>
-                <p>Naprawa kuchenek elektrycznych większości domowych producentów urządzeń AGD. Twoja kuchenka powoduje
-                    wybijanie bezpieczników a może nie grzeje? Prowadzimy serwis pogwarancyjny sprzętu AGD. Dlatego
-                    jeżeli mają
-                    Państwo niedziałającą kuchenkę, zapraszamy do kontaktu z naszym serwisem. W skutek czego nasz
-                    pracownik zjawi
-                    się na miejscu i pomoże w rozwiązaniu każdego problemu z niesprawną kuchenką. Specjalizujemy się
-                    szczególnie w
-                    trudnych usterkach, dlatego zachęcamy Państwa do kontaktu z nami.</p>
-            </div>
-        </div>
-        <div class="repair clearfix">
-            <div class="repair-img"><img src="img/naprawa-zmywarek.png" alt="Serwisant i zmywarka"></div>
-            <div class="desc-repair">
-                <h2>Naprawa zmywarek</h2>
-                <p>Serwis pogwarancyjny i naprawa zmywarek i innych urządzeń AGD w twojej kuchni.
-                    Realizujemy profesjonalne usługi serwisu agd takie jak naprawa zmywarek. Ponadto wszystkie naprawy
-                    zmywarek
-                    realizowane są u Ciebie w domu – nasz serwisant dojeżdża pod wskazany adres po wcześniejszym
-                    uzgodnieniu
-                    terminu. Dlatego podczas rozmowy z konsultantem umówisz termin naprawy. W trakcie rozmowy zapytamy
-                    Ciebie o
-                    markę i model twojej zmywarki – tak aby serwisant mógł zabrać z magazynu zestaw najbardziej
-                    potrzebnych części
-                    zamiennych dla twojego modelu zmywarki. W podobny sposób procedura wygląda jeżeli kontakt nastąpił
-                    drogą
-                    mailową. Z tą różnicą, że to my do Państwa odzwonimy w celu ustalenia szczegółów wizyty serwisu
-                    zmywarki.
-                    Dalej po ustaleniu terminu wizyty serwisowej, nasz fachowiec przyjedzie i naprawi uszkodzoną
-                    zmywarkę.
-                </p>
-            </div>
-        </div>
-        <div class="repair clearfix">
-            <div class="repair-img"><img src="img/naprawa-lodowek.png" alt="Serwisant i lodówka"></div>
-            <div class="desc-repair">
-                <h2>Naprawa lodówek</h2>
-                <p>Naprawa lodówek, zamrażarek oraz innego sprzętu chłodniczego w twoim domu.Lodówka nie działa, wydaje
-                    dziwne dźwięki a może zbyt mocno lub za słabo chłodzi? Niezależnie od tego jaka jest przyczyna
-                    awarii,
-                    twoja niedziałająca lodówka zostanie naprawiona. Wystarczy zadzwonić i zamówić nasz serwis AGD. W
-                    efekcie
-                    nasz serwisant pomoże w rozwiązaniu każdego problemu z niesprawną lodówką. Specjalizujemy się
-                    szczególnie
-                    w trudnych usterkach lodówek, dlatego zachęcamy Państwa do kontaktu z nami.
-                </p>
-            </div>
-        </div>
-        <a href="oferta.html">Więcej usług</a>
     </section>
     <section class="companies">
         <h1>Naprawiamy sprzęty tych marek</h1>
@@ -190,7 +193,7 @@
         </div>
     </section>
     <footer>
-        <p>&copy2022 Serwis AGD - naprawa i serwis. Projekt: Nikolas Feduniewicz</p>
+        <p>&copy;2022 Serwis AGD - naprawa i serwis. Projekt: Nikolas Feduniewicz</p>
     </footer>
     <script src="js/spojniki.js"></script>
 </body>

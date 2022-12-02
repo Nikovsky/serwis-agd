@@ -16,6 +16,7 @@ html {
   font-size: 10px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   margin: 0 auto;
+  caret-color: transparent;
 }
 
 .clearfix::after {
@@ -876,6 +877,101 @@ section.service-city div.service-city-info p#tel::before {
   font-family: "Oswald", Arial, Helvetica, sans-serif;
 }
 
+/* Contact */
+
+section.contact form.form-service input,
+button,
+select,
+textarea {
+  border: 0;
+  border-radius: 0.25em;
+  padding: 5px 10px;
+}
+
+section.contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100vw;
+  min-height: 95vh;
+  background-color: var(--white-color);
+}
+
+section.contact div.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+section.contact form.form-service div.contact-case {
+  margin-top: 10px;
+}
+
+section.contact form.form-service div.contact-case label {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+section.contact form.form-service div.contact-case input,
+select,
+textarea {
+  margin: 10px 0;
+}
+
+section.contact form.form-service div.contact-case select,
+section.contact form.form-service div.contact-case textarea,
+section.contact form.form-service div.contact-case input[type="text"],
+section.contact form.form-service div.contact-case input[type="email"],
+section.contact form.form-service div.contact-case input[type="tel"] {
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+section.contact form.form-service div.form-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+section.contact form.form-service button.submit-btn {
+  display: block;
+}
+
+section.contact form.form-service div.form-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+section.contact div.title img {
+  width: 50%;
+  margin: 10px;
+}
+
+section.contact div.title h1 {
+  color: var(--primary-color);
+  font-size: 2em;
+  padding: 10px;
+}
+
+section.contact input.submit-btn {
+  display: flex;
+  width: auto;
+  height: 6vh;
+  font-size: 1.15em;
+  line-height: 4vh;
+  font-size: 1.35em;
+  color: var(--white-color);
+  background: var(--second-color);
+  cursor: pointer;
+  margin: 20px auto;
+}
+
 /* Footer */
 footer {
   background-color: var(--second-color);
@@ -1261,6 +1357,36 @@ a#top-a.show {
     font-size: 2em;
     font-family: "Roboto Condensed", sans-serif;
   }
+
+  section.contact form.form-service div.contact-case {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  section.contact form.form-service div.form-first {
+    margin-right: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  section.contact form.form-service div.form-second {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  section.contact div.title h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    padding: 10px;
+  }
+
+  section.contact input.submit-btn {
+    font-size: 1.55em;
+  }
+
+  section.contact form.form-service div.contact-case label {
+    font-size: 1.65em;
+  }
 }
 
 @media (orientation: landscape) {
@@ -1479,6 +1605,11 @@ a#top-a.show {
   section.service-info > p {
     font-size: 1.75em;
   }
+
+  section.contact input.submit-btn {
+    font-size: 1.75em;
+    height: 10vh;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 730px) {
@@ -1538,6 +1669,14 @@ a#top-a.show {
 
   section.review div.review-card div.reviewer-info p.city {
     font-size: 1.6em;
+  }
+
+  section.contact input.submit-btn {
+    font-size: 1.55em;
+  }
+
+  section.contact form.form-service div.contact-case label {
+    font-size: 1.65em;
   }
 }
 
@@ -1727,6 +1866,37 @@ a#top-a.show {
     content: "Nr.tel: ";
     font-size: 1.1em;
     font-family: "Oswald", Arial, Helvetica, sans-serif;
+  }
+
+  section.contact form.form-service div.contact-case {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  section.contact form.form-service div.form-first {
+    margin-right: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  section.contact form.form-service div.form-second {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  section.contact div.title h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    padding: 10px;
+  }
+
+  section.contact input.submit-btn {
+    font-size: 1.55em;
+    height: 6vh;
+  }
+
+  section.contact form.form-service div.contact-case label {
+    font-size: 1.65em;
   }
 }
 
